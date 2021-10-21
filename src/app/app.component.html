@@ -1,43 +1,28 @@
-<h3>Cadastro de usuário</h3>
+<div id="page-content-wrapper" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+             
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="sair()">Sair</a> 
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="['/listarusuarios']" routerLinkActive="router-link-active" >Usuário</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</div>
 
-	<div class="container">
-		<form action="" id="formCadastroUser">
-			<div class="mb-2">
-				<label for="id" class="form-label">ID</label>
-				<input type="text" class="form-control" id="id" readonly="readonly">
-			</div>
-			<div class="mb-2">
-				<label for="nome" class="form-label">Nome</label>
-				<input type="text" class="form-control" id="nome" placeholder="informe o nome">
-			</div>
-			<div class="mb-2">
-				<label for="email" class="form-label">Email</label>
-				<input type="email" class="form-control" id="email" placeholder="name@example.com">
-			</div>
-
-			<div class="mb-2">
-				<label for="dataNasc" class="form-label">Data de nascimento</label>
-				<input type="date" class="form-control" id="dataNasc" placeholder="dd/MM/yyyy">
-			</div>
-			<div class="mb-2">
-				<select id="tipoPix" class="form-select" for="tipoPix" aria-label="Default select example">
-				  <option selected>Selecione o tipo da sua chave Pix</option>
-				  <option value="1">CPF</option>
-				  <option value="2">CELULAR</option>
-				  <option value="3">CNPJ</option>
-				  <option value="4">E-MAIL</option>
-				  <option value="5">ALEATÓRIA</option>
-				</select>
-			</div>
-			<div class="mb-2">
-				<label for="chavePix" class="form-label">ChavePix</label>
-				<input type="chavePix" class="form-control" id="chavePix">
-			</div>
-		</form>
-		<button type="button" class="btn btn-secondary"
-			onClick="document.getElementById('formCadastroUser').reset()">📄 Novo</button>
-		<button type="button" class="btn btn-primary" onClick="salvarUsuario()">💾 Salvar</button>
-		<button type="button" class="btn btn-danger" onclick="botaoDeletarDaTela();">⚠Deletar</button>
-		<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#pesquisarModal">🔎
-			Pesquisar</button>
-	</div>
+<router-outlet></router-outlet>

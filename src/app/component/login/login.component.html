@@ -1,0 +1,13 @@
+<div class="container">
+    <form>
+        <div class="mb-6">
+            <label>E-mail:</label>
+            <input type="email" id="email" [(ngModel)]="usuario.email">
+        </div>
+        <div class="mb-6">
+            <label>Senha:</label>
+            <input type="password" id="password" [(ngModel)]="usuario.password">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="login()">Acessar</button>
+    </form>
+</div>
